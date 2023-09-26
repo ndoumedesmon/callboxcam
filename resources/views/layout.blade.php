@@ -2,10 +2,20 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>CryptoCoin - Free Cryptocurrency Website Template</title>
+    <title>CallBoxCam - Free Cryptocurrency Website Template</title>
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta content="" name="keywords">
     <meta content="" name="description">
+
+    <link href="./Dropdown #8_files/css" rel="stylesheet">
+    <link href="./Dropdown #8_files/css(1)" rel="stylesheet">
+    <link href="./Dropdown #8_files/css(2)" rel="stylesheet">
+    <link rel="stylesheet" href="{{url('css/style.cs')}}s">
+    <link rel="stylesheet" href=" {{url('css/owl.carousel.min.css')}} ">
+
+
+    <link rel="stylesheet" href="{{url('css/style(1).css')}} ">
+
 
     <!-- Favicon -->
     <link href="{{url('img/favicon.ico')}}" rel="icon">
@@ -46,7 +56,7 @@
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
         <a href="/" class="navbar-brand d-flex align-items-center">
             <h2 class="m-0 text-primary"><img class="img-fluid me-2" src="{{url('img/icon-1.png')}}" alt=""
-                    style="width: 45px;">CryptoCoin</h2>
+                    style="width: 45px;">CallBoxCam</h2>
         </a>
         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
             <span class="navbar-toggler-icon"></span>
@@ -54,19 +64,26 @@
         <div class="collapse navbar-collapse" id="navbarCollapse">
             <div class="navbar-nav ms-auto py-4 py-lg-0">
                 <a href="/" class="nav-item nav-link">Home</a>
-                <a href="/about" class="nav-item nav-link">About</a>
                 <a href="/service" class="nav-item nav-link">Service</a>
-                <a href="/roadmap" class="nav-item nav-link">Roadmap</a>
+                <a href="/about" class="nav-item nav-link">About</a>
+                <a href="/contact" class="nav-item nav-link">Contact</a>
                 <div class="nav-item dropdown">
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
+                <div class="profile-pic mr-3">
+                    <!--<img src="{{url('img/person_2.jpg')}}" alt="Image">-->
+                
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
+                        Settings
+                    
+                    </a>
+                    </div>
                     <div class="dropdown-menu shadow-sm m-0">
-                        <a href="feature.html" class="dropdown-item">Feature</a>
-                        <a href="token.html" class="dropdown-item">Token Sale</a>
-                        <a href="faq.html" class="dropdown-item">FAQs</a>
-                        <a href="404.html" class="dropdown-item">404 Page</a>
+                        <a href="feature.html" class="dropdown-item">My Dashboards</a>
+                        <a href="token.html" class="dropdown-item">Profile Settings</a>
+                        <a href="faq.html" class="dropdown-item">Change password</a>
+                        <a href="404.html" class="dropdown-item">Logout</a>
                     </div>
                 </div>
-                <a href="/contact" class="nav-item nav-link">Contact</a>
+                
             </div>
             <div class="h-100 d-lg-inline-flex align-items-center d-none">
                 <!-- le login ici-->
@@ -83,7 +100,7 @@
             <div class="row g-5">
                 <div class="col-md-6">
                     <h1 class="text-primary mb-4"><img class="img-fluid me-2" src="{{url('img/icon-1.png')}}" alt=""
-                            style="width: 45px;">CryptoCoin</h1>
+                            style="width: 45px;">CallBoxCam</h1>
                     <span>Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed
                         stet lorem sit clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum
                         et lorem et sit.</span>

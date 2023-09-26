@@ -5,10 +5,11 @@
         <div class="container py-5">
             <div class="row g-5 align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="display-4 mb-3 animated slideInDown">Make Better Life With Trusted CryptoCoin</h1>
-                    <p class="animated slideInDown">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-                        diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo
-                        magna dolore erat amet</p>
+                    <h1 class="display-4 mb-3 animated slideInDown">Make Better Life With Trusted Analitic Tool</h1>
+                    <p class="animated slideInDown">Get the best out of your mobile money POS by fetching and analising your data
+                        with a more efficient and time saving tool, that will change your life for good. be updated 
+                        in real time about 
+                        </p>
                     <a href="" class="btn btn-primary py-3 px-4 animated slideInDown">Explore More</a>
                 </div>
                 <div class="col-lg-6 animated fadeIn">
@@ -210,15 +211,7 @@
                         <a href="">Read More <i class="fa fa-arrow-right ms-2"></i></a>
                     </div>
                 </div>
-                <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <div class="service-item bg-white p-5">
-                        <img class="img-fluid mb-4" src="img/icon-8.png" alt="">
-                        <h5 class="mb-3">Token Sale</h5>
-                        <p>Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo
-                            justo</p>
-                        <a href="">Read More <i class="fa fa-arrow-right ms-2"></i></a>
-                    </div>
-                </div>
+               
             </div>
         </div>
     </div>
