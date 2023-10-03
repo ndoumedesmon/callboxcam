@@ -89,14 +89,11 @@ h2 {
   -o-transition: .3s margin-top ease, .3s opacity ease, .3s visibility ease;
   transition: .3s margin-top ease, .3s opacity ease, .3s visibility ease;
   visibility: hidden; }
-  .custom-dropdown .dropdown-menu.active {
-    opacity: 1;
-    visibility: visible;
-    margin-top: 0px !important; }
+  
   .custom-dropdown .dropdown-menu a {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     font-size: 14px;
-    padding: 15px 15px;
+    padding: 15px 10px;
     position: relative;
     color: #b2bac1; }
     .custom-dropdown .dropdown-menu a:last-child {
@@ -118,6 +115,6 @@ h2 {
       -webkit-transform: translateY(-50%);
       -ms-transform: translateY(-50%);
       transform: translateY(-50%);
-      right: 15px;
+      right: 10px;
       border-radius: 4px;
       color: #fff; }

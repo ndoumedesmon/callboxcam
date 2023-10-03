@@ -124,6 +124,7 @@ h6,
         border: none;
         margin-top: 0;
         top: 150%;
+        right : 1px;
         opacity: 0;
         visibility: hidden;
         transition: .5s;

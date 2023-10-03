@@ -7,11 +7,13 @@
     <meta content="" name="keywords">
     <meta content="" name="description">
 
-    <link href="./Dropdown #8_files/css" rel="stylesheet">
-    <link href="./Dropdown #8_files/css(1)" rel="stylesheet">
-    <link href="./Dropdown #8_files/css(2)" rel="stylesheet">
-    <link rel="stylesheet" href="{{url('css/style.cs')}}s">
+    <link rel="stylesheet" href="{{url('css/css')}}" >
+    <link rel="stylesheet" href="{{url('css/css(1)')}}" >
+    <link rel="stylesheet" href="{{url('css/css(2)')}}" >
+    <link rel="stylesheet" href="{{url('css/style.css')}}">
+    <link rel="stylesheet" href="{{url('css/style(1).css')}}">
     <link rel="stylesheet" href=" {{url('css/owl.carousel.min.css')}} ">
+ 
 
 
     <link rel="stylesheet" href="{{url('css/style(1).css')}} ">
@@ -54,37 +56,38 @@
 
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top p-0 px-4 px-lg-5">
-        <a href="/" class="navbar-brand d-flex align-items-center">
-            <h2 class="m-0 text-primary"><img class="img-fluid me-2" src="{{url('img/icon-1.png')}}" alt=""
-                    style="width: 45px;">CallBoxCam</h2>
-        </a>
-        <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarCollapse">
-            <div class="navbar-nav ms-auto py-4 py-lg-0">
-                <a href="/" class="nav-item nav-link">Home</a>
-                <a href="/service" class="nav-item nav-link">Service</a>
-                <a href="/about" class="nav-item nav-link">About</a>
-                <a href="/contact" class="nav-item nav-link">Contact</a>
-                <div class="nav-item dropdown">
-                <div class="profile-pic mr-3">
-                    <!--<img src="{{url('img/person_2.jpg')}}" alt="Image">-->
-                
-                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">
-                        Settings
-                    
-                    </a>
+                <a href="/" class="navbar-brand d-flex align-items-center">
+                    <h2 class="m-0 text-primary"><img class="img-fluid me-2" src="{{url('img/icon-1.png')}}" alt=""
+                            style="width: 45px;">CallBoxCam
+                    </h2>
+                </a>
+                    <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse">
+                    <div class="navbar-nav ms-auto py-4 py-lg-0">
+                        <a href="/" class="nav-item nav-link">Login</a>
+                        <a href="/service" class="nav-item nav-link">Service</a>
+                        <a href="/about" class="nav-item nav-link">About</a>
+                        <a href="/contact" class="nav-item nav-link">Contact</a>
+
+                            <!--<div class="nav-item dropdown" >
+                                <div class="profile-pic mr-3">
+                                        <a href="#" data-toggle="dropdown" class=" d-flex align-items-center dropdown-link text-left" aria-haspopup="true" aria-expanded="false" data-offset="0,20">
+                                            <div class="profile-pic mr-3 ">
+                                                <img class="rounded-circle mt-3" style="height:3rem;" src="{{url('img/person_2.jpg')}}" alt="Image">
+                                            </div>
+                                        </a>
+                                </div>
+                                        <div class="dropdown-menu shadow-sm m-0">
+                                            <a href="feature.html" class="dropdown-item">My Dashboards</a>
+                                            <a href="token.html" class="dropdown-item">Profile Settings</a>
+                                            <a href="faq.html" class="dropdown-item">Change password</a>
+                                            <a href="404.html" class="dropdown-item">Logout</a>
+                                        </div>
+                            </div> -->
+                        
                     </div>
-                    <div class="dropdown-menu shadow-sm m-0">
-                        <a href="feature.html" class="dropdown-item">My Dashboards</a>
-                        <a href="token.html" class="dropdown-item">Profile Settings</a>
-                        <a href="faq.html" class="dropdown-item">Change password</a>
-                        <a href="404.html" class="dropdown-item">Logout</a>
-                    </div>
-                </div>
-                
-            </div>
             <div class="h-100 d-lg-inline-flex align-items-center d-none">
                 <!-- le login ici-->
             </div>
@@ -180,6 +183,7 @@
 
     <!-- Template Javascript -->
     <script src="{{url('js/main.js')}}"></script>
+  
 </body>
 </html>
    
