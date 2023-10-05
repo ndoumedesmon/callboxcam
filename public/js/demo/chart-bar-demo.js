@@ -8,12 +8,28 @@ var myLineChart = new Chart(ctx, {
   type: 'bar',
   data: {
     labels: ["January", "February", "March", "April", "May", "June"],
-    datasets: [{
-      label: "Revenue",
-      backgroundColor: "rgba(2,117,216,1)",
-      borderColor: "rgba(2,117,216,1)",
-      data: [4215, 5312, 6251, 7841, 9821, 14984],
-    }],
+    datasets: [
+      {
+        label: "benefices",
+        borderColor: "red",
+        data: [3215, 1312, 7251, 5841, 5821, 10984],
+        type : 'line'
+        },
+        {
+        label: "Dépots",
+        backgroundColor: "rgba(2,117,216,1)",
+        //borderColor: "blue",
+        data: [1215, 7312, 8251, 3841, 4821, 11984],
+        },
+        {
+          label: "Retraits",
+          backgroundColor: "yellow",
+          //borderColor: "blue",
+          data: [4215, 5312, 6251, 7841, 9821, 14984],
+          },
+      
+
+  ],
   },
   options: {
     scales: {
@@ -40,7 +56,7 @@ var myLineChart = new Chart(ctx, {
       }],
     },
     legend: {
-      display: false
+      display: true
     }
   }
 });

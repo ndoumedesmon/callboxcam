@@ -12,7 +12,7 @@
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
     </head>
     <body class="sb-nav-fixed">
-        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-dark">
+        <nav class="sb-topnav navbar navbar-expand navbar-dark bg-info">
             <!-- Navbar Brand-->
             <a class="navbar-brand ps-3" href="index.html">Start Bootstrap</a>
             <!-- Sidebar Toggle-->
@@ -102,8 +102,10 @@
                         </div>
                     </div>
                     <div class="sb-sidenav-footer">
+
+                        <!-- Ici mettre le nom de l'utilisateur loggé-->
                         <div class="small">Logged in as:</div>
-                        Start Bootstrap
+                        Desmon
                     </div>
                 </nav>
             </div>
@@ -178,6 +180,8 @@
                                 DataTable Example
                             </div>
                             <div class="card-body">
+
+                    <!--Ici je vais mettre les données de la BD-->
                                 <table id="datatablesSimple">
                                     <thead>
                                         <tr>

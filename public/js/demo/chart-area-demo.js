@@ -8,20 +8,38 @@ var myLineChart = new Chart(ctx, {
   type: 'line',
   data: {
     labels: ["Mar 1", "Mar 2", "Mar 3", "Mar 4", "Mar 5", "Mar 6", "Mar 7", "Mar 8", "Mar 9", "Mar 10", "Mar 11", "Mar 12", "Mar 13"],
-    datasets: [{
-      label: "Sessions",
+    datasets: [
+      {
+      label: "Nb Retraits",
       lineTension: 0.3,
-      backgroundColor: "rgba(2,117,216,0.2)",
-      borderColor: "rgba(2,117,216,1)",
+      //backgroundColor: none,
+      borderColor: "green",
       pointRadius: 5,
-      pointBackgroundColor: "rgba(2,117,216,1)",
-      pointBorderColor: "rgba(255,255,255,0.8)",
+      pointBackgroundColor: "green",
+      pointBorderColor: "green",
       pointHoverRadius: 5,
-      pointHoverBackgroundColor: "rgba(2,117,216,1)",
+      pointHoverBackgroundColor: "green",
       pointHitRadius: 50,
       pointBorderWidth: 2,
       data: [10000, 30162, 26263, 18394, 18287, 28682, 31274, 33259, 25849, 24159, 32651, 31984, 38451],
-    }],
+    },
+    {
+      label: "Nb Dépots",
+      lineTension: 0.3,
+      //backgroundColor: none,
+      borderColor: "red",
+      pointRadius: 5,
+      pointBackgroundColor: "red",
+      pointBorderColor: "red",
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: "red",
+      pointHitRadius: 50,
+      pointBorderWidth: 2,
+      data: [9000, 20162, 56263, 11394, 7287, 23682, 40274, 50259, 7849, 35159, 40651, 1984, 70451],
+    }
+    
+  
+  ],
   },
   options: {
     scales: {
@@ -39,7 +57,7 @@ var myLineChart = new Chart(ctx, {
       yAxes: [{
         ticks: {
           min: 0,
-          max: 40000,
+          max: 70000,
           maxTicksLimit: 5
         },
         gridLines: {
@@ -48,7 +66,7 @@ var myLineChart = new Chart(ctx, {
       }],
     },
     legend: {
-      display: false
+      display: true
     }
   }
 });

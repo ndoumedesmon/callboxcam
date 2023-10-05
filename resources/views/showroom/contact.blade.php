@@ -1,4 +1,4 @@
-@extends('layout')
+@extends('showroom.layout')
 @section('contenu')
     <!-- Header Start -->
     <div class="container-fluid hero-header bg-light py-5 mb-5">

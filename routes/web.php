@@ -22,17 +22,17 @@ Route::post('/',[LoginController::class,'store']);
 
 
 Route::get('/home', function () {
-    return view('home');
+    return view('showroom.home');
 })->name('home');
 
 Route::get('/service', function () {
-    return view('service');
+    return view('showroom.service');
 });
 
 Route::get('/about', function () {
-    return view('about');
+    return view('showroom.about');
 });
 
 Route::get('/contact', function () {
-    return view('contact');
+    return view('showroom.contact');
 });
