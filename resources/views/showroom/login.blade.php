@@ -16,25 +16,45 @@
                         <div class="col-sm-5 pe-0  justify-content-right">
                             <div class="col">
                                 <div class="card shadow-lg border-0 rounded-lg mt-5">
-                                    <div class="card-header"><h3 class="text-center font-weight-light my-4">Login</h3></div>
+                                
+                                    <div class="card-header">
+                                    @if (Route::has('login'))
+
+                                    <h3 class="text-center font-weight-light my-4">
+                                    @auth
+
+                                    <a href="{{ route('login') }}" class="text-sm text-gray-700 dark:text-gray-500 underline">Login</a>
+                                    @endauth
+                                </h3>
+                                    @endif
+                                
+                                </div>
+
+
                                     <div class="card-body">
-                                        <form method="post" action="{{ url('/') }}" novalidate>
+                                        
+                                        <form method="POST" action="{{route('login')}}" >
                                         @csrf    
+                                                {{$errors}} 
                                         <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputEmail" type="email" placeholder="name@example.com" />
-                                                <label for="inputEmail">Email address</label>
+                                                <input name="email" class="form-control" id="inputEmail" type="email" placeholder="name@example.com" :value="old('email')" required autofocus />
+                                                <label for="email" :value="__('email')">Email address</label>
+                                                <div class="invalid-feedback">Email Not good !</div>
                                             </div>
+
+
                                             <div class="form-floating mb-3">
-                                                <input class="form-control" id="inputPassword" type="password" placeholder="Password" />
-                                                <label for="inputPassword">Password</label>
+                                                <input class="form-control" required autocomplete="current-password"  id="inputPassword" type="password" name="password" />
+                                                <label for="inputPassword" :value="__('Password')">Password</label>
                                             </div>
+
                                             <div class="form-check mb-3">
                                                 <input class="form-check-input" id="inputRememberPassword" type="checkbox" value="" />
                                                 <label class="form-check-label" for="inputRememberPassword">Remember Password</label>
                                             </div>
                                             <div class="d-flex align-items-center justify-content-between mt-4 mb-0">
                                                 <a class="small" href="password.html">Forgot Password?</a>
-                                                <button class="btn btn-primary">Login</button>
+                                                <button class="btn btn-primary">{{ __('Log in') }}</button>
                                             </div>
                                         </form>
                                     </div>
@@ -104,7 +124,7 @@
                     <img class="img-fluid mb-4" src="img/icon-9.png" alt="">
                     
                     <!-- les nobres venant de la base de donnée-->
-            <h1 class="display-4" data-toggle="counter-up">123456</h1> <!-- les nobres venant de la base de donnée-->
+            <h1 class="display-4" data-toggle="counter-up">00345</h1> <!-- les nobres venant de la base de donnée-->
                     <p class="fs-5 text-primary mb-0">Today Transactions</p>
                 </div>
                 <div class="col-lg-4 col-md-6 text-center wow fadeIn" data-wow-delay="0.3s">

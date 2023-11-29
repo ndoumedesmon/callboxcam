@@ -1,8 +1,10 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\LoginController;
-use App\Http\Requests;
+use App\Models\User;
+use App\Models\Transaction;
+use App\Models\Sale;
+
 
 
 /*
@@ -16,23 +18,23 @@ use App\Http\Requests;
 |
 */
 
-Route::get('/',[LoginController::class,'create']);
-Route::post('/',[LoginController::class,'store']);
+
+Route::get('/', function () {
+    return view('showroom/login');
+    //return view('welcome');
+})->name('login');
 
 
 
-Route::get('/home', function () {
-    return view('showroom.home');
-})->name('home');
 
-Route::get('/service', function () {
-    return view('showroom.service');
-});
+Route::get('/adminviews/adminpage', function () {
+    $REQUEST = App\Models\User::join('clusters', 'users.id', '=', 'clusters.user_id')
+    ->join('sales', 'sales.cluster_id', '=', 'clusters.id')
+    ->join('transactions', 'transactions.sale_id', '=', 'transactions.id')
+    ->get();
+    $nbTrans = $REQUEST -> where('type','=','transfert') -> count() ;
 
-Route::get('/about', function () {
-    return view('showroom.about');
-});
+    return view('adminviews/adminpage', compact('REQUEST','nbTrans'));
+})->middleware(['auth'])->name('adminpage');
 
-Route::get('/contact', function () {
-    return view('showroom.contact');
-});
+require __DIR__.'/auth.php';

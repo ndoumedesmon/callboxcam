@@ -8,6 +8,7 @@ use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
+
 class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable;
@@ -18,9 +19,10 @@ class User extends Authenticatable
      * @var array<int, string>
      */
     protected $fillable = [
-        'name',
+        'username',
         'email',
         'password',
+        'parent_id'
     ];
 
     /**
@@ -44,11 +46,25 @@ class User extends Authenticatable
 
     public function parent()
 {
-    return $this->belongsTo('App\user', 'parent_id');
+    return $this->belongsTo(User::class, 'parent_id');
 }
 
-public function child()
+public function children()
 {
-    return $this->hasMany('App\user', 'parent_id');
+    return $this->hasMany(User::class, 'parent_id');
 }
+
+    public function cluster()
+    {
+        return $this->hasOne(Cluster::class);
+    }
+
+    public function sale()
+    {
+        return $this->hasOne(Sale::class);
+    }
+
+    #use HasTree;
+
+
 }
