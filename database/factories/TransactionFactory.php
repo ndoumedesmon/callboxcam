@@ -15,12 +15,12 @@ class TransactionFactory extends Factory
      */
     public function definition()
     {
-        $listType = ["depot","transfert"];
+        $listType = ["depot","retrait"];
         return [
-            'amount' => $this -> faker -> randomFloat(4,0),
+            'amount' => $this -> faker -> randomFloat(2),
             'type' => $this -> faker -> randomElement($listType),
-            'destinator' => $this -> faker -> randomFloat(6,0),
-            'created_at' => now()
+            'destinator' => $this -> faker -> randomFloat(6),
+            'created_at' => $this -> faker->dateTime()
         ];
     }
 }

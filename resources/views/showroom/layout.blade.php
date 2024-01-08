@@ -67,9 +67,9 @@
             <div class="collapse navbar-collapse" id="navbarCollapse">
                     <div class="navbar-nav ms-auto py-4 py-lg-0">
                         <a href="/" class="nav-item nav-link">Login</a>
-                        <a href="/service" class="nav-item nav-link">Service</a>
-                        <a href="/about" class="nav-item nav-link">About</a>
-                        <a href="/contact" class="nav-item nav-link">Contact</a>
+                        <a href="#service" class="nav-item nav-link">Service</a>
+                        <a href="#about" class="nav-item nav-link">About</a>
+                        <a href="#contact" class="nav-item nav-link">Contact</a>
 
                             <!--<div class="nav-item dropdown" >
                                 <div class="profile-pic mr-3">

@@ -21,6 +21,8 @@ class AuthenticatedSessionController extends Controller
         return view('showroom.login');
     }
 
+ 
+
     /**
      * Handle an incoming authentication request.
      *
