@@ -13,7 +13,7 @@ class transDashController extends Controller
 
         $dataPoints = [];
 
-        foreach ($tans as $browser) {
+        foreach ($trans as $browser) {
 
             $dataPoints[] = [
                 "clusterID" => $browser['clusterID'],
