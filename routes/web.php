@@ -6,6 +6,7 @@ use App\Models\Transaction;
 use App\Models\Sale;
 use App\Models\Cluster;
 use App\Http\Controllers\chartController;
+use App\Http\Controllers\newuserController;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon ;
 
@@ -28,6 +29,11 @@ Route::get('/', function () {
     return view('showroom/login');
     //return view('welcome');
 })->name('login');
+
+Route::get('contact', [newuserController::class, 'store']);
+Route::post('contact', [newuserController::class, 'create'])->name('users');
+
+
 
 Route::get('/adminviews/users', function () {
 

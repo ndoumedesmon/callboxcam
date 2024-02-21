@@ -11,21 +11,8 @@
         </script>
         <link href="https://cdn.jsdelivr.net/npm/simple-datatables@7.1.2/dist/style.min.css" rel="stylesheet" />
         <link href="{{url('css/adminStyle.css')}}" rel="stylesheet" />
-       <link rel="stylesheet">
-                  .context-menu { 
-                        position: absolute; 
-                        z-index: -1 ;
-                    } 
-            .context-menu form .menu {
-              display: flex;
-              flex-direction: column;
-              background-color: #fff;
-              border-radius: 10px;
-              box-shadow: 0 10px 20px rgb(64 64 64 / 5%);
-              padding: 10px 0;
-              
-            }
-      </link>
+        <!-- Option 1: Include in HTML -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/css/multi-select-tag.css">
         <script src="https://cdn.jsdelivr.net/gh/habibmhamadi/multi-select-tag@2.0.1/dist/js/multi-select-tag.js"></script>
         <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
@@ -512,25 +499,83 @@ myPieChart.update();
         <script src="{{url('js/scripts.js')}}"></script>
         <script>
 
-      document.onclick = hideMenu; 
-      document.oncontextmenu = rightClick; 
+      const form = document.getElementById('myform')
+      
+     function validate() {
+      
+      
 
-        function hideMenu() { 
-            document.getElementById("contextMenu").style.display = "none" 
-        } 
+      var name = document.getElementById("username").value;
+      var nameR = /^[a-zA-Z0-9_]+$/ ;
+      var pass = document.getElementById("pass").value;
+      var passR = /^[a-zA-Z0-9_]+$/ ;
+      var tel = document.getElementById("tel").value;
+      var telR = /([0-9]){9}/;
+      var mail = document.getElementById("mail").value;
+      var mailR = /^[a-z0-9._-]+@[a-z0-9._-]+\.[a-z]{2,6}$/;
+      var valo = {} ;
 
-        function rightClick(e) { 
-            e.preventDefault(); 
-            alert("hello !!!"+e) ;
-            if (document.getElementById("contextMenu").style.display == "block"){ 
-                hideMenu(); 
-            }else{ 
-                var menu = document.getElementById("contextMenu")      
-                menu.style.display = 'block'; 
-                menu.style.left = e.pageX + "px"; 
-                menu.style.top = e.pageY + "px"; 
-            } }
 
+
+      if(nameR && passR && telR && mailR) {
+
+        
+        
+        if( nameR.test(name) == false) {
+         
+          document.getElementById("userEr").style.display = "block" ;
+
+        } else {
+          document.getElementById("userEr").style.display = "none" ;
+          valo["name"] = name ;
+        }
+
+        if( passR.test(pass) == false ) {
+          document.getElementById("passEr").style.display = "block" ;
+        } else {
+          document.getElementById("passEr").style.display = "none" ;
+          valo["pass"] = pass ;
+        }
+
+        if( telR.test(tel) == false ) {
+          document.getElementById("telEr").style.display = "block" ;
+        } else {
+          document.getElementById("telEr").style.display = "none" ;
+          valo["tel"] = tel ;
+        }
+
+        if( mailR.test(mail) == false ) {
+          document.getElementById("mailEr").style.display = "block" ;
+        } else {
+          document.getElementById("mailEr").style.display = "none" ;
+          valo["mail"] = mail ;
+        }
+
+     }
+
+     // que faire de valo ?????
+  
+  $(function() {
+    $.ajax({
+      method: "get",
+      url: "users",
+      data: {
+        id: valo
+      },
+      success: function(response) {
+        alert("sent");
+      }
+    });
+  });
+
+
+
+    
+    }
+
+   
+
+     
         </script>
     </body>
 </html>
